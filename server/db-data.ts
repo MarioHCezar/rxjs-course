@@ -72,10 +72,18 @@ export const COURSES: any = {
         category: 'BEGINNER'
     },
     8: {
-        id:8,
+        id: 8,
         description: "Angular Material Course",
         iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
         longDescription: "Build Applications with the official Angular Widget Library",
+        category: 'ADVANCED'
+    },
+
+    9: {
+        id: 9,
+        description: "DLS BB",
+        iconUrl: "https://logodownload.org/wp-content/uploads/2014/05/banco-do-brasil-logo-0.png",
+        longDescription: "Utilize a biblioteca de componentes do Banco do Brasil em suas aplicações",
         category: 'ADVANCED'
     },
 };
@@ -340,11 +348,11 @@ export const LESSONS = {
 
 };
 
-export function findCourseById(courseId:number) {
+export function findCourseById(courseId: number) {
     return COURSES[courseId];
 }
 
-export function findLessonsForCourse(courseId:number) {
+export function findLessonsForCourse(courseId: number) {
     return Object.values(LESSONS).filter(lesson => lesson.courseId == courseId);
 }
 
